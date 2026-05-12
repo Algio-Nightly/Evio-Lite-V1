@@ -13,7 +13,7 @@
 - The first (true) embedding. For pre-training, input is one type token, it will output 18 numbers (effectivenesses like 0x, 0.5x, 2x) against all 18 types.
 - The second (MLP) embedding. For pre-training, input is the layer just before output from 3 instances of the pre-trained true embedding [move type, opponent type-1, opponent type-2]. The output is the specific effectiveness (for eg. fire against grass/steel will give 4x)
 - Go over all 18 types (randomly arranged) and repeat in different epochs to memorize a gist of the types in the (true) embedding.
-- Go over all possible combinations of [move type, opponent type-1, opponent type-2] (randomly arranged) and repeat in different epochs to memorize the in-practice type effectivenesses in the (MLP) embedding.
+- Go over all possible combinations of [move type, opponent type-1, opponent type-2] (randomly arranged) and repeat in different epochs to memorize the in-practice type effectivenesses in the (MLP) embedding. move type and opponent type-1 must be proper types (not null/unk). opponent type-2 can be null (for single types)
 
 ## Moves
 - Go over every possible move and memorize the stats in the embeddings.
