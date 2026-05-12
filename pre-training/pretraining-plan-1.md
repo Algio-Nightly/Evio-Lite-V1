@@ -6,7 +6,7 @@
 
 ## Species
 - Go over every possible pokemon and memorize the stats in the embeddings.
-- Prediction of HP, attack, sp. attack, defense, sp. defense, speed.
+- Prediction of HP, attack, defense, sp. attack, sp. defense, speed.
 - Randomly arrange every pokemon and repeat in different epochs until the loss is very less.
 
 ## Types (Hierarchical Pre-training)
