@@ -1,6 +1,5 @@
 import sys
 import numpy as np
-import jax.numpy as jnp
 import pandas as pd
 
 from pathlib import Path
@@ -44,6 +43,6 @@ class MovesPretrainer:
             row = [token] + self.get_stats(token)
             batch_list.append(row)
 
-        batch = jnp.array(batch_list)
+        batch = np.asarray(batch_list)
 
         return batch

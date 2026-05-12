@@ -1,6 +1,5 @@
 import sys
 import numpy as np
-import jax.numpy as jnp
 import pandas as pd
 import itertools
 
@@ -54,7 +53,7 @@ class TypesPretrainerE1:
             row = [token] + self.get_eff(token)
             batch_list.append(row)
 
-        batch = jnp.array(batch_list)
+        batch = np.asarray(batch_list)
 
         return batch
 
@@ -87,4 +86,4 @@ class TypesPretrainerE2:
             eff = self.get_eff(m_t, ot1, ot2)
             batch_list.append([m_t, ot1, ot2, eff])
 
-        return jnp.array(batch_list)
+        return np.asarray(batch_list)
